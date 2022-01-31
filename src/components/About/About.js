@@ -43,8 +43,8 @@ function About() {
           to create an interactive application that allows you to search for
           National parks near your location while also displaying your local
           weather using your IP address. My abilities to communicate along with
-          my leadership skills, makes me a valuable addition to any team.
-          Passionate about developing responsive websites that haven’t been seen
+          my leadership skills, makes me a valuable addition to any team
+          Passionate about developing responsive websites that haven`t been seen
           before for potential clients. <br></br>
           <br></br>
           <Button
