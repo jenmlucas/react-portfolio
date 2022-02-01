@@ -28,7 +28,6 @@ const useStyles = makeStyles({
 });
 
 export default function About() {
-  const [value, setValue] = React.useState(0);
   const classes = useStyles();
   return (
     <section>

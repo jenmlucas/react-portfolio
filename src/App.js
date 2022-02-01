@@ -1,14 +1,12 @@
 import "./App.css";
-import About from "./components/About/About";
-import Nav from "./components/Nav/Nav";
+import Nav from "./components/Nav/PortfolioContainer";
 
 
 function App() {
   return (
     <div>
-      <Nav></Nav>
       <main>
-        <About></About>
+      <Nav></Nav>
       </main>
     </div>
   );
