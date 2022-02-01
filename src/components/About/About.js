@@ -1,5 +1,5 @@
 import React from "react";
-import placeholder from "../../assets/images/me/placeholder.png";
+import placeholder from "../../assets/me/placeholder.png";
 import Button from "@mui/material/Button";
 import { makeStyles } from "@mui/styles";
 import Avatar from "@mui/material/Avatar";
@@ -21,10 +21,10 @@ const useStyles = makeStyles({
 });
 
 function About() {
-  const terms = useStyles();
+  const classes = useStyles();
   return (
     <section>
-      <div className={terms.about}>
+      <div className={classes.about}>
         <Avatar
           src={placeholder}
           sx={{ width: 400, height: 400 }}
@@ -32,8 +32,8 @@ function About() {
           variant="square"
         ></Avatar>
 
-        <p className={terms.bio}>
-          <h1 className={terms.aboutMeHeader}> About Me </h1>
+        <p className={classes.bio}>
+          <h1 id="about" className={classes.aboutMeHeader}> About Me </h1>
           Full- stack web developer with a background in Medical, which has
           instilled strengths in meeting deadlines, organization, creativity,
           learning quickly on the job, and communication with teamwork. Working
@@ -60,9 +60,6 @@ function About() {
             size="small"
           >
             LinkedIN
-          </Button>
-          <Button href="#" target="blank" size="small">
-            Resume
           </Button>
         </p>
       </div>
