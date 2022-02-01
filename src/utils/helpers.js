@@ -3,10 +3,9 @@ export function validateEmail(email) {
     return re.test(String(email).toLowerCase());
   }
   
-  export function checkPassword(input) {
-    const passw = /^[A-Za-z]\w{7,14}$/;
-    if (input.match(passw)) {
-      return true;
+  export function checkMessage(input) {
+    if (input.length >= 2 ) {
+      return true
     }
     return false;
   }
