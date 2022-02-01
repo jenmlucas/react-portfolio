@@ -1,36 +1,57 @@
 import React from "react";
-import { makeStyles } from "@mui/styles";
+import Box from "@mui/material/Box";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 
-
-
-const useStyles = makeStyles({});
-
-
-function Nav() {
-  const classes = useStyles();
-
+export default function Nav({ currentPage, handlePageChange }) {
   return (
-      <header>
-      <h1>Jennifer Lucas</h1>
-      <h2>Full-Stack Web Developer</h2>
-      <nav>
-        <ul>
-          <li>
-              <span>About Me</span>
-          </li>
-          <li>
-            <span>Contact</span>
-          </li>
-          <li>
-            <span>Portfolio</span>
-          </li>
-          <li>
-            <span>Resume</span>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h3" component="div" sx={{ flexGrow: 1 }}>
+            Jennifer Lucas
+          </Typography>
+          <Button
+            variant="round"
+            color="inherit"
+            href="#about"
+            onClick={() => handlePageChange("About")}
+            className={currentPage === "About" ? "nav-link active" : "nav-link"}
+          >
+            About Me
+          </Button>
+          <Button
+            color="inherit"
+            onClick={() => handlePageChange("Portfolio")}
+            className={
+              currentPage === "Portfolio" ? "nav-link active" : "nav-link"
+            }
+          >
+            Portfolio
+          </Button>
+          <Button
+            color="inherit"
+            href="#contact"
+            onClick={() => handlePageChange("Contact")}
+            className={
+              currentPage === "Contact" ? "nav-link active" : "nav-link"
+            }
+          >
+            Contact
+          </Button>
+          <Button
+            color="inherit"
+            onClick={() => handlePageChange("Resume")}
+            className={
+              currentPage === "Resume" ? "nav-link active" : "nav-link"
+            }
+          >
+            Resume
+          </Button>
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
 }
-
-export default Nav;

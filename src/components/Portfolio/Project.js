@@ -1,0 +1,1 @@
+// map through the AllProjects card component - props get passed here --- 1 single care with discription, name, links etc image

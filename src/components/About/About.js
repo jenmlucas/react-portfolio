@@ -7,9 +7,11 @@ import Avatar from "@mui/material/Avatar";
 const useStyles = makeStyles({
   aboutMeHeader: {
     textAlign: "center",
+    fontSize: 50,
   },
   about: {
     display: "flex",
+    marginTop: 50,
     alignItems: "center",
     marginLeft: 500,
   },
@@ -18,12 +20,21 @@ const useStyles = makeStyles({
     alignItems: "center",
     marginLeft: 20,
   },
+  bioTitle: {
+    textAlign: "center",
+    fontSize: 20,
+    fontWeight: "bold",
+  },
 });
 
-function About() {
+export default function About() {
+  const [value, setValue] = React.useState(0);
   const classes = useStyles();
   return (
     <section>
+      <h1 className={classes.aboutMeHeader}>
+        About Me
+      </h1>
       <div className={classes.about}>
         <Avatar
           src={placeholder}
@@ -33,7 +44,7 @@ function About() {
         ></Avatar>
 
         <p className={classes.bio}>
-          <h1 id="about" className={classes.aboutMeHeader}> About Me </h1>
+          <p className={classes.bioTitle}>Biography</p>
           Full- stack web developer with a background in Medical, which has
           instilled strengths in meeting deadlines, organization, creativity,
           learning quickly on the job, and communication with teamwork. Working
@@ -67,4 +78,4 @@ function About() {
   );
 }
 
-export default About;
+

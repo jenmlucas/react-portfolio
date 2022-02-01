@@ -1,0 +1,1 @@
+//renders all individual projects -array of objects through props to project that makes a bunch of them (all 6) const =[] map through render out Project.js 
