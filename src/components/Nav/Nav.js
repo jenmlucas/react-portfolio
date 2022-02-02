@@ -5,6 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import cover from "../../assets/cover/sunset.png";
+import resume from "../../assets/resume/resume.pdf";
 
 export default function Nav({ currentPage, handlePageChange }) {
   return (
@@ -40,11 +41,8 @@ export default function Nav({ currentPage, handlePageChange }) {
           </Button>
           <Button
             color="inherit"
-            href="#resume"
-            // onClick={() => handlePageChange("Resume")}
-            // className={
-            //   currentPage === "Resume" ? "nav-link active" : "nav-link"
-            // }
+            href={resume}
+            target="_blank"
           >
             Resume
           </Button>
