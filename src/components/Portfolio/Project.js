@@ -7,33 +7,33 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 
-
 export default function Portfolio(props) {
-  
+  const { title, description, image, githubLink, deployedLink} = props;
+
   return (
-      {props.projects.map(item => (
+    // {props.project.map(item => (
     <Card sx={{ maxWidth: 345 }}>
     <CardMedia
       component="img"
       height="200"
-      img= ""
+      image={require(`${image}`)}
       alt =""
     />
     <CardContent>
       <Typography gutterBottom variant="h5" component="div">
-       {item.title}
+       {title}
       </Typography>
       <Typography variant="body2" color="text.secondary">
-       {item.description}
+       {description}
       </Typography>
     </CardContent>
     <CardActions>
-      <Button size="small" href={item.githubLink} target="blank">GitHub</Button>
-      <Button size="small" href={item.deployedLink} target="blank">Deployed</Button>
+      <Button size="small" href={githubLink} target="_blank">GitHub</Button>
+      <Button size="small" href={deployedLink} target="_blank">Deployed</Button>
     </CardActions>
   </Card>
-  ))}
-);
+//   ))}
+)
 }
 
 

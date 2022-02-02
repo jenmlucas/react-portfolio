@@ -4,12 +4,14 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import cover from "../../assets/cover/sunset.png";
 
 export default function Nav({ currentPage, handlePageChange }) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar>
+      <img src={cover} width="100%" height="500"></img>
+      <Toolbar>
           <Typography variant="h3" component="div" sx={{ flexGrow: 1 }}>
             Jennifer Lucas
           </Typography>
