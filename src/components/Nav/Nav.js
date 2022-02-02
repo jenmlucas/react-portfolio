@@ -24,6 +24,7 @@ export default function Nav({ currentPage, handlePageChange }) {
           </Button>
           <Button
             color="inherit"
+            href="#portfolio"
             onClick={() => handlePageChange("Portfolio")}
             className={
               currentPage === "Portfolio" ? "nav-link active" : "nav-link"
@@ -43,6 +44,7 @@ export default function Nav({ currentPage, handlePageChange }) {
           </Button>
           <Button
             color="inherit"
+            href="#resume"
             onClick={() => handlePageChange("Resume")}
             className={
               currentPage === "Resume" ? "nav-link active" : "nav-link"
