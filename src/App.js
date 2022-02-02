@@ -1,10 +1,20 @@
 import "./App.css";
 import Nav from "./components/Nav/PortfolioContainer";
+import { makeStyles } from "@mui/styles";
+import { ClassNames } from "@emotion/react";
+
+const useStyles = makeStyles({
+root: {
+  backgroundColor: "#87CEEB"
+}
+
+})
 
 function App() {
+   const classes = useStyles();
   return (
     <div>
-      <main>
+      <main className={classes.root}>
       <Nav></Nav>
       </main>
     </div>

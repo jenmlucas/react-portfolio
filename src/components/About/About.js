@@ -5,13 +5,15 @@ import { makeStyles } from "@mui/styles";
 import Avatar from "@mui/material/Avatar";
 
 const useStyles = makeStyles({
+  root: {
+    
+  },
   aboutMeHeader: {
     textAlign: "center",
-    fontSize: 50,
+    fontSize: 60,
   },
   about: {
     display: "flex",
-    marginTop: 50,
     alignItems: "center",
     marginLeft: 500,
   },
@@ -19,21 +21,38 @@ const useStyles = makeStyles({
     width: "40%",
     alignItems: "center",
     marginLeft: 20,
+    MarginBottom: 10,
+    fontSize: 18,
   },
   bioTitle: {
     textAlign: "center",
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: "bold",
   },
+  skills: {
+    textAlign: "center",
+    marginTop: 20,
+    marginBottom: 10,
+    fontSize: 40,
+  },
+  skillList: {
+    display: "flex",
+    justifyContent: "center",
+    fontSize: 20,
+  },
+  buttonContainer: {
+    textAlign: "center"
+  },
+  button: {
+    fontSize: 20
+  }
 });
 
 export default function About() {
   const classes = useStyles();
   return (
     <section>
-      <h1 className={classes.aboutMeHeader}>
-        About Me
-      </h1>
+      <h1 className={classes.aboutMeHeader}>About Me</h1>
       <div className={classes.about}>
         <Avatar
           src={placeholder}
@@ -57,24 +76,59 @@ export default function About() {
           Passionate about developing responsive websites that haven`t been seen
           before for potential clients. <br></br>
           <br></br>
-          <Button
-            href="https://github.com/jenmlucas"
-            target="blank"
-            size="small"
-          >
-            Github
-          </Button>
-          <Button
-            href="https://www.linkedin.com/in/jennifer-lucas-478599218/"
-            target="blank"
-            size="small"
-          >
-            LinkedIN
-          </Button>
         </p>
       </div>
+      <div className={classes.buttonContainer}>
+      <Button className={classes.button}
+        href="https://github.com/jenmlucas"
+        target="blank"
+        size="small"
+      >
+        Github
+      </Button>
+      <Button className={classes.button}
+        href="https://www.linkedin.com/in/jennifer-lucas-478599218/"
+        target="blank"
+        size="small"
+      >
+        LinkedIN
+      </Button>
+      </div>
+      <h2 className={classes.skills}> Skills </h2>
+      <ul className={classes.skillList}>
+        <ul>
+          Languages:
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+        <ul>
+          MERN Stack:
+          <li>MongoDB</li>
+          <li>Express</li>
+          <li>React</li>
+          <li>Node</li>
+        </ul>
+        <ul>
+          Styling:
+          <li>Bootstrap</li>
+          <li>Foundation</li>
+          <li>Material UI</li>
+        </ul>
+        <ul>
+          Applications:
+          <li>Github</li>
+          <li>Git</li>
+          <li>Heroku</li>
+        </ul>
+        <ul>
+          Additional:
+          <li>HandleBars</li>
+          <li>MySql</li>
+          <li>Sequlize</li>
+          <li>GraphQL</li>
+        </ul>
+      </ul>
     </section>
   );
 }
-
-
