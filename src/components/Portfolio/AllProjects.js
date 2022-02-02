@@ -6,7 +6,7 @@ export default function Projects() {
       {
         title: "dghf",
         description: "hdfhgdjf",
-        image: "../../assets/projects/placeholder1.png",
+        image: "../assets/projects/placeholder1.png",
         githubLink: "",
         deployedLink: "",
       },
@@ -49,20 +49,7 @@ export default function Projects() {
 
   return (
       <div className="flex-row">
-      {/* <Portfolio Project = {projectContent}/> */}
-        {projectContent.map(projects => {
-        return (
-          <Portfolio
-            title={projects.title}
-            description={projects.description}
-            image={projects.image}
-            githubLink={projects.githubLink}
-            deployedLink={projects.deployedLink}
-            key={projects.title}
-        >
-            </Portfolio>
-        )
-        })}
+      <Portfolio project = {projectContent}/>
       </div>
   );
 }

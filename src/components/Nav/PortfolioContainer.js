@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Nav from "../Nav/Nav";
 import About from "../About/About";
 import Contact from "../Contact/Contact";
-import Portfolio from "../Portfolio/Project";
+import Portfolio from "../Portfolio/AllProjects";
 
 
 export default function PortfolioContainer() {

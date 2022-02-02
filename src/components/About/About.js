@@ -61,7 +61,7 @@ export default function About() {
           variant="square"
         ></Avatar>
 
-        <p className={classes.bio}>
+        <div className={classes.bio}>
           <p className={classes.bioTitle}>Biography</p>
           Full- stack web developer with a background in Medical, which has
           instilled strengths in meeting deadlines, organization, creativity,
@@ -76,7 +76,7 @@ export default function About() {
           Passionate about developing responsive websites that haven`t been seen
           before for potential clients. <br></br>
           <br></br>
-        </p>
+        </div>
       </div>
       <div className={classes.buttonContainer}>
       <Button className={classes.button}
