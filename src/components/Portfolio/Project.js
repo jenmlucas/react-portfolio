@@ -5,15 +5,21 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { makeStyles } from "@mui/styles";
 
+const useStyles = makeStyles({
+    display: {
+      display: "flex",
+      flexDirection: "row"
+    }
+})
 
 export default function Portfolio(props) {
-  console.log(props)
-  // props.project[0].map(item => console.log(item))
+    const classes = useStyles();
   return (
-    <div>
+    <div  className={classes.display}>
     {props.project.map(item => (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }} key={item.title}>
     <CardMedia
       component="img"
       height="200"
