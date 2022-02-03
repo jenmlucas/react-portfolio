@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { makeStyles } from "@mui/styles";
 import { checkMessage, validateEmail } from "../../utils/helpers";
 import contactPhoto from "../../assets/contact/contact.png";
-import placeholder from "../../assets/me/placeholder.png"
+import TextareaAutosize from "@mui/base/TextareaAutosize";
 
 const useStyles = makeStyles({
   form: {
@@ -12,45 +12,31 @@ const useStyles = makeStyles({
   },
   spacingImageOne: {
     width: 500,
-    paddingLeft: 200,
-  },
-  spacingImageTwo: {
-    paddingLeft: 300,
+    paddingLeft: 400,
   },
   image: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    paddingLeft: 500,
-    marginTop: 30
+    paddingLeft: 300,
+    marginTop: 100,
   },
   email: {
     textAlign: "center",
-    width: "320%",
-    height: 60,
-    borderRadius: "10%",
   },
   user: {
     textAlign: "center",
-    width: "320%",
-    height: 80,
-    borderRadius: "10%",
   },
   message: {
     textAlign: "center",
-    width: "320%",
-    height: 150,
-    borderRadius: "10%",
   },
   title: {
     textAlign: "center",
-    color: "#383D5C"
+    color: "#383D5C",
   },
   button: {
     textAlign: "center",
     marginTop: 10,
-    width: 100,
-    height: 50
   },
   errorText: {
     textAlign: "center",
@@ -96,42 +82,49 @@ export default function Contact() {
   return (
     <div>
       <form className={classes.form}>
-        <img src={contactPhoto} width="20%" height="500" alt="contact me photo" className={classes.spacingImageOne}></img>
+        <img
+          src={contactPhoto}
+          width="20%"
+          height="500"
+          alt="contact me photo"
+          className={classes.spacingImageOne}
+        ></img>
         <div className={classes.image}>
-        <h1 className={classes.title}> Send a Message </h1>
-        <input 
-          className={classes.email}
-          value={email}
-          name="email"
-          onChange={handleInputChange}
-          type="email"
-          placeholder="email"
-        />
-        <input
-          className={classes.user}
-          value={name}
-          name="name"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="name"
-        />
-        <input
+          <h1 className={classes.title}> Send a Message </h1>
+          <input
+            className={classes.email}
+            value={email}
+            name="email"
+            onChange={handleInputChange}
+            type="email"
+            placeholder="email"
+          />
+          <input
+            className={classes.user}
+            value={name}
+            name="name"
+            onChange={handleInputChange}
+            type="text"
+            placeholder="name"
+          />
+          <TextareaAutosize
           className={classes.message}
-          value={message}
-          name="message"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="message"
-        />
-        <button
-          className={classes.button}
-          type="button"
-          onClick={handleFormSubmit}
-        >
-          Submit
-        </button>
+            aria-label="minimum height"
+            minRows={3}
+            placeholder="message"
+            style={{ width: 170 }}
+            value={message}
+            name="message"
+            onChange={handleInputChange}
+          />
+          <button
+            className={classes.button}
+            type="button"
+            onClick={handleFormSubmit}
+          >
+            Submit
+          </button>
         </div>
-        {/* <img src={placeholder} width="20%" height="500" alt="placeholder" className={classes.spacingImageTwo}></img> */}
       </form>
       {errorMessage && (
         <div>
