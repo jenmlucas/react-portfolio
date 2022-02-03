@@ -39,6 +39,7 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     fontSize: 20,
+    marginBottom: 50
   },
   buttonContainer: {
     textAlign: "center"
@@ -77,22 +78,6 @@ export default function About() {
           before for potential clients. <br></br>
           <br></br>
         </div>
-      </div>
-      <div className={classes.buttonContainer}>
-      <Button className={classes.button}
-        href="https://github.com/jenmlucas"
-        target="blank"
-        size="small"
-      >
-        Github
-      </Button>
-      <Button className={classes.button}
-        href="https://www.linkedin.com/in/jennifer-lucas-478599218/"
-        target="blank"
-        size="small"
-      >
-        LinkedIN
-      </Button>
       </div>
       <h2 className={classes.skills}> Skills </h2>
       <ul className={classes.skillList}>
