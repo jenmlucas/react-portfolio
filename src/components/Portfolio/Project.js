@@ -19,13 +19,20 @@ const useStyles = makeStyles({
     sizing: {
       marginTop: 50,
       width: 600,
-      marginBottom: 50
+      marginBottom: 50,
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between"
     },
     title: {
       textAlign: "center"
     },
     photo: {
       height: 400
+    },
+    button: {
+      display: "flex",
+      justifyContent: "center"
     }
 })
 
@@ -49,7 +56,7 @@ export default function Portfolio(props) {
        {item.description}
       </Typography>
     </CardContent>
-    <CardActions>
+    <CardActions className={classes.button}>
       <Button size="small" href={item.githubLink} target="_blank" >GitHub</Button>
       <Button size="small" href={item.deployedLink} target="_blank" >Deployed</Button>
     </CardActions>
