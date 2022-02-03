@@ -6,8 +6,6 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { makeStyles } from "@mui/styles";
-import { positions } from '@mui/system';
-
 
 const useStyles = makeStyles({
     display: {
