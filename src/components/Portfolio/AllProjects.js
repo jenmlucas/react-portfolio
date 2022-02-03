@@ -32,18 +32,18 @@ export default function Projects() {
         deployedLink: "https://jenmlucas.github.io/Password-Generator/",
       },
       {
-        title: "Budget Tracker",
-        description: "This PWA allows users to track their monthly expenses both on and offline. For convience the user can download the application to their desktop. Users will be able to added expensions to their tracker with no internet connection due to indexedDB caching the post and saving it until the connection is restored.",
-        image: require('../../assets/projectPhoto/budgetTracker.png'),
-        githubLink: "https://github.com/jenmlucas/budget-tracker",
-        deployedLink: "https://bootcampt-budget-tracker-2021.herokuapp.com/",
-      },
-      {
         title: "Wander",
         description: "Created an interactive site that allows you to search for National parks and your local weather. Search results saved in local storage allowing for the user to repeatedly use the app without having to research for data. IP address api used to automatically pull your local weather report. Weather forecast is made more user friendly by making the UV index color coded based on the weather conditions such as, favorable, moderate, and severe. Total of 3 api's used. Created navagation bars to make it easier on the user to jump down to the section they prefer. Weather or park search.",
         image: require('../../assets/projectPhoto/wander.png'),
         githubLink: "https://github.com/jenmlucas/parks-and-rec",
         deployedLink: "https://jenmlucas.github.io/parks-and-rec/",
+      },
+      {
+        title: "Budget Tracker",
+        description: "This PWA allows users to track their monthly expenses both on and offline. For convience the user can download the application to their desktop. Users will be able to added expensions to their tracker with no internet connection due to indexedDB caching the post and saving it until the connection is restored.",
+        image: require('../../assets/projectPhoto/budgetTracker.png'),
+        githubLink: "https://github.com/jenmlucas/budget-tracker",
+        deployedLink: "https://bootcampt-budget-tracker-2021.herokuapp.com/",
       }
     ];
 

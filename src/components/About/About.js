@@ -6,8 +6,9 @@ import Avatar from "@mui/material/Avatar";
 const useStyles = makeStyles({
   aboutMeHeader: {
     textAlign: "center",
-    fontSize: 60,
-    color: "#383D5C"
+    fontSize: 80,
+    color: "#383D5C",
+    textDecoration: "underline"
   },
   about: {
     display: "flex",
@@ -19,11 +20,11 @@ const useStyles = makeStyles({
     alignItems: "center",
     marginLeft: 50,
     MarginBottom: 10,
-    fontSize: 18,
+    fontSize: 23,
   },
   bioTitle: {
     textAlign: "center",
-    fontSize: 30,
+    fontSize: 40,
     fontWeight: "bold",
     color: "#383D5C"
   },
@@ -32,13 +33,22 @@ const useStyles = makeStyles({
     marginTop: 20,
     marginBottom: 10,
     fontSize: 40,
-    color: "#383D5C"
+    color: "#383D5C",
+    textDecoration: "underline"
+  },
+  skillsLiTop: {
+    marginTop: 10,
+    listStyle: "none"
+  },
+  skillLi: {
+    listStyle: "none"
   },
   skillList: {
     display: "flex",
-    justifyContent: "center",
-    fontSize: 20,
-    marginBottom: 50
+    textAlign: "center",
+    fontSize: 23,
+    marginBottom: 50,
+    marginLeft: 500
   },
   buttonContainer: {
     textAlign: "center"
@@ -81,36 +91,36 @@ export default function About() {
       <h2 className={classes.skills}> Skills </h2>
       <ul className={classes.skillList}>
         <ul>
-          Languages:
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
+          Languages: 
+          <li className={classes.skillsLiTop}>HTML</li>
+          <li className={classes.skillLi}>CSS</li>
+          <li className={classes.skillLi}>JavaScript</li>
         </ul>
         <ul>
           MERN Stack:
-          <li>MongoDB</li>
-          <li>Express</li>
-          <li>React</li>
-          <li>Node</li>
+          <li className={classes.skillsLiTop}>MongoDB</li>
+          <li className={classes.skillLi}>Express</li>
+          <li className={classes.skillLi}>React</li>
+          <li className={classes.skillLi}>Node</li>
         </ul>
         <ul>
           Styling:
-          <li>Bootstrap</li>
-          <li>Foundation</li>
-          <li>Material UI</li>
+          <li className={classes.skillsLiTop}>Bootstrap</li>
+          <li className={classes.skillLi}>Foundation</li>
+          <li className={classes.skillLi}>Material UI</li>
         </ul>
         <ul>
           Applications:
-          <li>Github</li>
-          <li>Git</li>
-          <li>Heroku</li>
+          <li className={classes.skillsLiTop}>Github</li>
+          <li className={classes.skillLi}>Git</li>
+          <li className={classes.skillLi}>Heroku</li>
         </ul>
         <ul>
           Additional:
-          <li>HandleBars</li>
-          <li>MySql</li>
-          <li>Sequlize</li>
-          <li>GraphQL</li>
+          <li className={classes.skillsLiTop}>HandleBars</li>
+          <li className={classes.skillLi}>MySql</li>
+          <li className={classes.skillLi}>Sequlize</li>
+          <li className={classes.skillLi}>GraphQL</li>
         </ul>
       </ul>
     </section>

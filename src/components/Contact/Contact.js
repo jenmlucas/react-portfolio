@@ -23,9 +23,11 @@ const useStyles = makeStyles({
   },
   email: {
     textAlign: "center",
+    width: 250
   },
   user: {
     textAlign: "center",
+    width: 250
   },
   message: {
     textAlign: "center",
@@ -112,7 +114,7 @@ export default function Contact() {
             aria-label="minimum height"
             minRows={3}
             placeholder="message"
-            style={{ width: 170 }}
+            style={{ width: 250 }}
             value={message}
             name="message"
             onChange={handleInputChange}
