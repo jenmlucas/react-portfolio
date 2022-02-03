@@ -72,13 +72,14 @@ export default function Contact() {
       return;
     }
     if (!checkMessage(message)) {
-      setErrorMessage(`Your message must have a minimun of 4 characters`);
+      setErrorMessage(`Your message must have a minimun of 2 characters`);
       return;
     }
 
     setName("");
     setEmail("");
     setMessage("");
+    setErrorMessage("");
   };
 
   return (
@@ -126,13 +127,13 @@ export default function Contact() {
           >
             Submit
           </button>
-        </div>
-      </form>
       {errorMessage && (
-        <div>
+        <div className={classes.form}>
           <p className={classes.errorText}>{errorMessage}</p>
         </div>
       )}
+        </div>
+      </form>
     </div>
   );
 }
