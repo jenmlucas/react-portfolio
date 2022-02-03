@@ -1,37 +1,56 @@
 import React, { useState } from "react";
 import { makeStyles } from "@mui/styles";
 import { checkMessage, validateEmail } from "../../utils/helpers";
+import contactPhoto from "../../assets/contact/contact.png";
+import placeholder from "../../assets/me/placeholder.png"
 
 const useStyles = makeStyles({
   form: {
     display: "flex",
-    alignItems: "center",
+    marginTop: 30,
+    marginBottom: 30,
+  },
+  spacingImageOne: {
+    width: 500,
+    paddingLeft: 200,
+  },
+  spacingImageTwo: {
+    paddingLeft: 300,
+  },
+  image: {
+    display: "flex",
     flexDirection: "column",
+    alignItems: "center",
+    paddingLeft: 500,
+    marginTop: 30
   },
   email: {
     textAlign: "center",
-    width: "10%",
-    height: 50,
+    width: "320%",
+    height: 60,
     borderRadius: "10%",
   },
   user: {
     textAlign: "center",
-    width: "11%",
-    height: 70,
+    width: "320%",
+    height: 80,
     borderRadius: "10%",
   },
   message: {
     textAlign: "center",
-    width: "12%",
-    height: 100,
+    width: "320%",
+    height: 150,
     borderRadius: "10%",
   },
   title: {
     textAlign: "center",
+    color: "#383D5C"
   },
   button: {
     textAlign: "center",
     marginTop: 10,
+    width: 100,
+    height: 50
   },
   errorText: {
     textAlign: "center",
@@ -63,12 +82,11 @@ export default function Contact() {
     if (!validateEmail(email) || !name) {
       setErrorMessage("Email or username is invalid");
       return;
-    } if (!checkMessage(message)) {
-      setErrorMessage(
-        `Your message must have a minimun of 4 characters`
-      );
-    return;
-  }
+    }
+    if (!checkMessage(message)) {
+      setErrorMessage(`Your message must have a minimun of 4 characters`);
+      return;
+    }
 
     setName("");
     setEmail("");
@@ -77,9 +95,11 @@ export default function Contact() {
 
   return (
     <div>
-      <h1 className={classes.title}> Send a Message </h1>
       <form className={classes.form}>
-        <input
+        <img src={contactPhoto} width="20%" height="500" alt="contact me photo" className={classes.spacingImageOne}></img>
+        <div className={classes.image}>
+        <h1 className={classes.title}> Send a Message </h1>
+        <input 
           className={classes.email}
           value={email}
           name="email"
@@ -95,7 +115,7 @@ export default function Contact() {
           type="text"
           placeholder="name"
         />
-         <input
+        <input
           className={classes.message}
           value={message}
           name="message"
@@ -110,6 +130,8 @@ export default function Contact() {
         >
           Submit
         </button>
+        </div>
+        {/* <img src={placeholder} width="20%" height="500" alt="placeholder" className={classes.spacingImageTwo}></img> */}
       </form>
       {errorMessage && (
         <div>

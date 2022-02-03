@@ -1,26 +1,23 @@
 import React from "react";
 import placeholder from "../../assets/me/placeholder.png";
-import Button from "@mui/material/Button";
 import { makeStyles } from "@mui/styles";
 import Avatar from "@mui/material/Avatar";
 
 const useStyles = makeStyles({
-  root: {
-    
-  },
   aboutMeHeader: {
     textAlign: "center",
     fontSize: 60,
+    color: "#383D5C"
   },
   about: {
     display: "flex",
     alignItems: "center",
-    marginLeft: 500,
+    marginLeft: 350,
   },
   bio: {
-    width: "40%",
+    width: "50%",
     alignItems: "center",
-    marginLeft: 20,
+    marginLeft: 50,
     MarginBottom: 10,
     fontSize: 18,
   },
@@ -28,12 +25,14 @@ const useStyles = makeStyles({
     textAlign: "center",
     fontSize: 30,
     fontWeight: "bold",
+    color: "#383D5C"
   },
   skills: {
     textAlign: "center",
     marginTop: 20,
     marginBottom: 10,
     fontSize: 40,
+    color: "#383D5C"
   },
   skillList: {
     display: "flex",
