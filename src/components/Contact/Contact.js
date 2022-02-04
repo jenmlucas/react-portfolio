@@ -86,7 +86,7 @@ export default function Contact() {
             alt="contact me photo"
           ></img>
           <div className={classes.form}>
-          <Grid padding={6}> 
+          <Grid padding={6} marginTop={10}> 
             <h1 className={classes.title}>
               Send a Message
             </h1>
