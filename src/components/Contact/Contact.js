@@ -3,38 +3,23 @@ import { makeStyles } from "@mui/styles";
 import { checkMessage, validateEmail } from "../../utils/helpers";
 import contactPhoto from "../../assets/contact/contact.png";
 import TextareaAutosize from "@mui/base/TextareaAutosize";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
 
 const useStyles = makeStyles({
-  form: {
-    display: "flex",
-    marginTop: 30,
-    marginBottom: 30,
-  },
-  spacingImageOne: {
-    width: 500,
-    paddingLeft: 400,
-  },
   image: {
     display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    paddingLeft: 300,
-    marginTop: 100,
+    flexDirection: "column"
   },
   email: {
+    display: "flex",
     textAlign: "center",
-    width: 250
-  },
-  user: {
-    textAlign: "center",
-    width: 250
-  },
-  message: {
-    textAlign: "center",
+    width: 250,
   },
   title: {
     textAlign: "center",
     color: "#383D5C",
+    marginLeft: 30
   },
   button: {
     textAlign: "center",
@@ -83,57 +68,71 @@ export default function Contact() {
   };
 
   return (
-    <div>
-      <form className={classes.form}>
-        <img
-          src={contactPhoto}
-          width="20%"
-          height="500"
-          alt="contact me photo"
-          className={classes.spacingImageOne}
-        ></img>
-        <div className={classes.image}>
-          <h1 className={classes.title}> Send a Message </h1>
-          <input
-            className={classes.email}
-            value={email}
-            name="email"
-            onChange={handleInputChange}
-            type="email"
-            placeholder="email"
-          />
-          <input
-            className={classes.user}
-            value={name}
-            name="name"
-            onChange={handleInputChange}
-            type="text"
-            placeholder="name"
-          />
-          <TextareaAutosize
-          className={classes.message}
-            aria-label="minimum height"
-            minRows={3}
-            placeholder="message"
-            style={{ width: 250 }}
-            value={message}
-            name="message"
-            onChange={handleInputChange}
-          />
-          <button
-            className={classes.button}
-            type="button"
-            onClick={handleFormSubmit}
-          >
-            Submit
-          </button>
-      {errorMessage && (
-        <div className={classes.form}>
-          <p className={classes.errorText}>{errorMessage}</p>
-        </div>
-      )}
-        </div>
-      </form>
-    </div>
+    <Box textAlign="center">
+      <Grid
+        columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justifyContent="space-around" 
+        style={{ minHeight: "60vh" }}
+      >
+        <Grid xs={12} flexWrap="wrap" className={classes.image}>
+          <img
+            src={contactPhoto}
+            width="400"
+            height="500"
+            alt="contact me photo"
+          ></img>
+          <div className={classes.form}>
+          <Grid padding={6}> 
+            <h1 className={classes.title}>
+              Send a Message
+            </h1>
+            <input
+              className={classes.email}
+              value={email}
+              name="email"
+              onChange={handleInputChange}
+              type="email"
+              placeholder="email"
+            />
+            <input
+              className={classes.email}
+              value={name}
+              name="name"
+              onChange={handleInputChange}
+              type="text"
+              placeholder="name"
+            />
+            <TextareaAutosize
+              className={classes.email}
+              aria-label="minimum height"
+              minRows={3}
+              placeholder="message"
+              style={{ width: 252 }}
+              value={message}
+              name="message"
+              onChange={handleInputChange}
+            />
+            <button
+              alignItems="center"
+              className={classes.button}
+              type="button"
+              onClick={handleFormSubmit}
+            >
+              Submit
+            </button>
+            {errorMessage && (
+              <div className={classes.form}>
+                <p className={classes.errorText}>{errorMessage}</p>
+              </div>
+            )}
+            </Grid>
+          </div>
+        </Grid>
+      </Grid>
+    </Box>
   );
 }
