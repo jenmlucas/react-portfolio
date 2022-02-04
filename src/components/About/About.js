@@ -53,20 +53,18 @@ export default function About() {
     <section>
       <h1 className={classes.aboutMeHeader}>About Me</h1>
       <div className={classes.about}>
-        <Grid container justifyContent="space-around">
+        <Grid container justifyContent="space-evenly" alignContent="center">
           <Avatar
             src={placeholder}
             sx={{ width: 400, height: 400 }}
             alt="Jennifer Lucas"
             variant="square"
           ></Avatar>
-        </Grid>
-        <Grid container justifyContent="space-around">
           <div className={classes.bio}>
             <p className={classes.bioTitle}>Biography</p>
             Full- stack web developer with a background in Medical, which has
             instilled strengths in meeting deadlines, organization, creativity,
-            learning quickly on the job, and communication with teamwork.
+            learning quickly on the job, and communication with teamwork.npm
             Working towards earning a certificate from the University of Arizona
             through a coding bootcamp, with newly developed skills in HTML, CSS,
             JavaScript, React.js, MySql, and responsive web design. I worked on
