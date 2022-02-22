@@ -1,5 +1,5 @@
 import React from "react";
-import placeholder from "../../assets/me/placeholder.png";
+import me from "../../assets/me/me.png";
 import { makeStyles } from "@mui/styles";
 import Avatar from "@mui/material/Avatar";
 import Grid from "@mui/material/Grid";
@@ -11,15 +11,9 @@ const useStyles = makeStyles({
     color: "#383D5C",
     textDecoration: "underline",
   },
-  about: {
-    // display: "flex",
-    // alignItems: "center",
-    // marginLeft: 350,
-  },
   bio: {
     width: "50%",
     alignItems: "center",
-    MarginBottom: 10,
     fontSize: 23,
   },
   bioTitle: {
@@ -55,22 +49,19 @@ export default function About() {
       <div className={classes.about}>
         <Grid container justifyContent="space-evenly" alignContent="center">
           <Avatar
-            src={placeholder}
-            sx={{ width: 400, height: 400 }}
+            src={me}
+            sx={{ width: 400, height: 500 }}
             alt="Jennifer Lucas"
             variant="square"
           ></Avatar>
           <div className={classes.bio}>
             <p className={classes.bioTitle}>Biography</p>
-            Full- stack web developer with a background in Medical, which has
+            Full Stack Web Developer with a background in Medical, which has
             instilled strengths in meeting deadlines, organization, creativity,
-            learning quickly on the job, and communication with teamwork.npm
-            Working towards earning a certificate from the University of Arizona
-            through a coding bootcamp, with newly developed skills in HTML, CSS,
-            JavaScript, React.js, MySql, and responsive web design. I worked on
-            a team project to create an interactive application that allows you
-            to search for National parks near your location while also
-            displaying your local weather using your IP address. My abilities to
+            learning quickly on the job, and communication with teamwork.
+            I recently earned a certificate from the University of Arizona
+            through a coding Bootcamp, with newly developed skills in HTML, CSS,
+            JavaScript, React.js, MySql, and responsive web design. My most recent group project is called RenDATEvous, it is an application that was created to help couples figure out what they want to do for a date. Almost everyone asks at one point what would be a good date idea?  So this app helps solve that problem by allowing the user to either click randomize that choose's a random date for you or you can search through categories for ideas. User's are also able to create an account in order to save their favorite dates as well as rank the dates. My abilities to
             communicate along with my leadership skills, makes me a valuable
             addition to any team Passionate about developing responsive websites
             that haven`t been seen before for potential clients. <br></br>

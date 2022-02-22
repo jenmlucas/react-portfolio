@@ -27,11 +27,6 @@ export default function Footer() {
         href="https://www.linkedin.com/in/jennifer-lucas-478599218/"
         target="_blank"
         /> 
-         <BottomNavigationAction
-        icon={<TwitterIcon fontSize="large" />}
-        href="https://www.linkedin.com/in/jennifer-lucas-478599218/"
-        target="_blank"
-        /> 
     </footer>
   );
 }
