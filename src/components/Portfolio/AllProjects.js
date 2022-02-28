@@ -4,11 +4,18 @@ import Portfolio from "./Project";
 export default function Projects() {
     const projectContent= [
       {
+        title: "RenDATEvous",
+        description: "As the Love Guru Team we take love extremely seriously. Have you and your partner constantly fought about what to do, when you finally get your sacred Date Night? Well fight no more with our amazing RenDATEvous application! Randomly find amazing dates or select them from one of our numerous exciting categories. Love the date? Save it to your profile for later reference! Enjoy LOVE.",
+        image: require('../../assets/projectPhoto/renDATEvous.png'),
+        githubLink: "https://github.com/Blitman12/ren-date-vous",
+        deployedLink: "https://rendatevous.herokuapp.com/",
+      },
+      {
         title: "Baby Aid",
         description: "Baby Aid was created to allow parents with children newly born to 18, be able to have a safe environment to ask questions and receive answers from other experienced parents. Not everyone has a support system around them that allows for the ability to get help if needed. In order to use the site you must create an account. Once created you are then able to post questions and respond with answers to other parents questions. You are also able to vote on both the question and answer, which allows users to know which questions are the most common and which answers are the best solutions to the questions.",
         image: require('../../assets/projectPhoto/babyaid.png'),
         githubLink: "https://github.com/jenmlucas/Baby-Aid",
-        deployedLink: "https://calm-fortress-46248.herokuapp.com/",
+        deployedLink: "https://babyaid.herokuapp.com/",
       },
       {
         title: "Work Day Scheduler",
